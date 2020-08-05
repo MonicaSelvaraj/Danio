@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPyVolume Widget</title>
+    
+</head>
+<body>
+
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.14.0/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "9968c4704489456a90a7e5fb5903ddfd": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.4.0",
+      "state": {
+        "_dom_classes": [],
+        "_model_module": "@jupyter-widgets/controls",
+        "_model_module_version": "1.4.0",
+        "_model_name": "VBoxModel",
+        "_view_count": null,
+        "_view_module": "@jupyter-widgets/controls",
+        "_view_module_version": "1.4.0",
+        "_view_name": "VBoxView",
+        "box_style": "",
+        "children": [
+          "IPY_MODEL_154d9d5774d842f3917aaf95ded44a06"
+        ],
+        "layout": "IPY_MODEL_1a3c5e514f8d40eda162f1b1377fe0b6"
+      }
+    },
+    "154d9d5774d842f3917aaf95ded44a06": {
+      "model_name": "FigureModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.1",
+      "state": {
+        "_dom_classes": [],
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.1",
+        "_model_name": "FigureModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.1",
+        "_view_name": "FigureView",
+        "ambient_coefficient": 0.5,
+        "animation": 1000.0,
+        "animation_exponent": 1.0,
+        "camera": "IPY_MODEL_18af6f8dc128446d96ba510e73014bc6",
+        "camera_center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_control": "trackball",
+        "camera_fov": 45.0,
+        "capture_fps": null,
+        "cube_resolution": 512,
+        "diffuse_coefficient": 0.8,
+        "displayscale": 1.0,
+        "downscale": 1,
+        "eye_separation": 6.4,
+        "height": 500,
+        "layout": "IPY_MODEL_3cbeafaf14584b0cb447a999d7c57b03",
+        "matrix_projection": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix_world": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "meshes": [],
+        "mouse_mode": "normal",
+        "panorama_mode": "no",
+        "render_continuous": false,
+        "scatters": [
+          "IPY_MODEL_6a4f4c64ccc44eafabcfb1db67dde3c3",
+          "IPY_MODEL_ea151655d08144bf81fa49e37232ae3b"
+        ],
+        "scene": "IPY_MODEL_0341e61f530b49d4841191911e5b4cc2",
+        "selection_mode": "replace",
+        "selector": "lasso",
+        "show": "Volume",
+        "specular_coefficient": 0.5,
+        "specular_exponent": 5.0,
+        "stereo": false,
+        "style": {
+          "axes": {
+            "visible": true,
+            "label": {
+              "color": "white"
+            },
+            "ticklabel": {
+              "color": "white"
+            },
+            "color": "white"
+          },
+          "box": {
+            "visible": true
+          },
+          "background-color": "#000001"
+        },
+        "volumes": [],
+        "width": 400,
+        "xlabel": "x",
+        "xlim": [
+          0.0,
+          58.5267015
+        ],
+        "ylabel": "y",
+        "ylim": [
+          0.0,
+          38.50237431
+        ],
+        "zlabel": "z",
+        "zlim": [
+          0.0,
+          25.95564444
+        ]
+      }
+    },
+    "18af6f8dc128446d96ba510e73014bc6": {
+      "model_name": "PerspectiveCameraModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.0.3",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.0.3",
+        "_model_name": "PerspectiveCameraModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "aspect": 1.0,
+        "castShadow": false,
+        "children": [],
+        "far": 2000.0,
+        "focus": 10.0,
+        "fov": 46.0,
+        "frustumCulled": true,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixAutoUpdate": true,
+        "matrixWorld": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixWorldInverse": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixWorldNeedsUpdate": false,
+        "modelViewMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "name": "",
+        "near": 0.1,
+        "normalMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "position": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "projectionMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "receiveShadow": false,
+        "renderOrder": 0,
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          "XYZ"
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "PerspectiveCamera",
+        "up": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "visible": true,
+        "zoom": 1.0
+      }
+    },
+    "3cbeafaf14584b0cb447a999d7c57b03": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.1.0",
+      "state": {
+        "_model_module": "@jupyter-widgets/base",
+        "_model_module_version": "1.1.0",
+        "_model_name": "LayoutModel",
+        "_view_count": null,
+        "_view_module": "@jupyter-widgets/base",
+        "_view_module_version": "1.1.0",
+        "_view_name": "LayoutView",
+        "align_content": null,
+        "align_items": null,
+        "align_self": null,
+        "border": null,
+        "bottom": null,
+        "display": null,
+        "flex": null,
+        "flex_flow": null,
+        "grid_area": null,
+        "grid_auto_columns": null,
+        "grid_auto_flow": null,
+        "grid_auto_rows": null,
+        "grid_column": null,
+        "grid_gap": null,
+        "grid_row": null,
+        "grid_template_areas": null,
+        "grid_template_columns": null,
+        "grid_template_rows": null,
+        "height": null,
+        "justify_content": null,
+        "left": null,
+        "margin": null,
+        "max_height": null,
+        "max_width": null,
+        "min_height": null,
+        "min_width": null,
+        "order": null,
+        "overflow": null,
+        "overflow_x": null,
+        "overflow_y": null,
+        "padding": null,
+        "right": null,
+        "top": null,
+        "visibility": null,
+        "width": null
+      }
+    },
+    "6a4f4c64ccc44eafabcfb1db67dde3c3": {
+      "model_name": "ScatterModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.1",
+      "state": {
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.1",
+        "_model_name": "ScatterModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.1",
+        "_view_name": "ScatterView",
+        "color": "blue",
+        "color_selected": "white",
+        "connected": false,
+        "geo": "sphere",
+        "line_material": "IPY_MODEL_3eca79a91d0c4764b5290f7839be16da",
+        "material": "IPY_MODEL_5d015a3bf3bb4b5bb47cd092b10dac78",
+        "selected": null,
+        "sequence_index": 0,
+        "size": 2,
+        "size_selected": 2.6,
+        "texture": null,
+        "visible": true,
+        "vx": null,
+        "vy": null,
+        "vz": null,
+        "x": [
+          {
+            "dtype": "float32",
+            "shape": [
+              672
+            ]
+          }
+        ],
+        "y": [
+          {
+            "dtype": "float32",
+            "shape": [
+              672
+            ]
+          }
+        ],
+        "z": [
+          {
+            "dtype": "float32",
+            "shape": [
+              672
+            ]
+          }
+        ]
+      },
+      "buffers": [
+        {
+          "encoding": "base64",
+          "path": [
+            "x",
+            0,
+            "data"
+          ],
+          "data": "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"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "y",
+            0,
+            "data"
+          ],
+          "data": "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"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "z",
+            0,
+            "data"
+          ],
+          "data": "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"
+        }
+      ]
+    },
+    "3eca79a91d0c4764b5290f7839be16da": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.0.3",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.0.3",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "5d015a3bf3bb4b5bb47cd092b10dac78": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.0.3",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.0.3",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "ea151655d08144bf81fa49e37232ae3b": {
+      "model_name": "ScatterModel",
+      "model_module": "ipyvolume",
+      "model_module_version": "~0.5.1",
+      "state": {
+        "_model_module": "ipyvolume",
+        "_model_module_version": "~0.5.1",
+        "_model_name": "ScatterModel",
+        "_view_count": null,
+        "_view_module": "ipyvolume",
+        "_view_module_version": "~0.5.1",
+        "_view_name": "ScatterView",
+        "color": "green",
+        "color_selected": "white",
+        "connected": false,
+        "geo": "sphere",
+        "line_material": "IPY_MODEL_856bb0536dd84ad2ac29c12f742ff281",
+        "material": "IPY_MODEL_6e3f202242a144b7b53c088241fc57f5",
+        "selected": null,
+        "sequence_index": 0,
+        "size": 2,
+        "size_selected": 2.6,
+        "texture": null,
+        "visible": true,
+        "vx": null,
+        "vy": null,
+        "vz": null,
+        "x": [
+          {
+            "dtype": "float32",
+            "shape": [
+              369
+            ]
+          }
+        ],
+        "y": [
+          {
+            "dtype": "float32",
+            "shape": [
+              369
+            ]
+          }
+        ],
+        "z": [
+          {
+            "dtype": "float32",
+            "shape": [
+              369
+            ]
+          }
+        ]
+      },
+      "buffers": [
+        {
+          "encoding": "base64",
+          "path": [
+            "x",
+            0,
+            "data"
+          ],
+          "data": "OzyoP8v5QEDsdHJAmRKIQF4Ut0BYWvxAkPvvQOvVBkG0NBNBGGQZQXyTH0FE8itBguxFQTEIgEGZEohBd7idQSX1nkEuq6JBN2GmQVo5tUHUr8RBLynHQY99y0H3h9NBUgHWQQA+10G3MNxBv+bfQcTB4UFx/uJBLMzpQd7j7EE+OPFBMQgAQoyBAkKQXARCEkoFQuvVBkKd7QlCe1QNQs0XDEJQBQ1C/UEOQgIdEEI2IhRCxaAaQuwUGUIYZBlCTGkdQs5WHkKAbiFCVR8hQqu9IUILEiZCZosoQmtmKkJrZipCxt8sQkjNLUJNqC9C/78yQioPM0Ks/DNCimM3QrWyN0K5jTlCPHs6QkBWPEJAVjxCRDE+QnCAPkJJDEBCy/lAQtDUQkL7I0NCqWBEQv/+REKxFkhCiqJJQmgJTUKYM09C7tFPQhohUEJFcFBCHvxRQh78UUL3h1NCeXVUQtXuVkKpn1ZCqZ9WQgUZWUIJ9FpC3qRaQjRDW0INz1xC4n9cQrsLXkK7C15CEqpeQmlIX0JtI2FC9OtjQkqKZELNd2VCIxZmQtFSZ0KmA2dCzlaeP4emAED0iwpAWFp8QM5WnkDxLq1A4x8DQbQ0E0FqJxhBc90bQSAaHUHgwiVBjf8mQaghMkFVXjNBLylHQd1lSEHmG0xBf49oQex0ckGQXIRB5/qEQZ3tiUFuAppBd7idQc5WnkHdZchB86zRQaXE1EFgkttBKPHnQYNq6kE1gu1BjCDuQZXW8UHsdPJBVH/6QQpy/0EKlAFC4x8DQg5vA0Ln+gRCFyUHQuvVBkJynglCJLYMQntUDUKI5RJCQ7MZQhhkGUJuAhpC0jEgQrCYI0IHNyRCYrAmQo3/JkJrZipC7VMrQpuQLEJ0HC5C9gkvQnj3L0L65DBCUYMxQlGDMUL/vzJC03AyQopjN0KKYzdCDFE4Qum3O0KgqkBCpIVCQgi1SELu0U9Ccb9QQpwOUULHXVFCTiZUQtXuVkLV7lZCBRlZQrJVWkJgkltCNENbQg3PXEI5Hl1CZG1dQrsLXkJtI2FCbSNhQphyYUIbYGJCRq9iQlgbakI7PKg/zlYeQF4UN0Du0U9AvOqWQODCpUCESaNA2gjrQFAFDUH0iwpBtDQTQRhkGUEgGh1BfJMfQY3/JkHxLi1BRPIrQfrkMEEMUThBZ8o6Qd1lSEHdZUhBCfRaQWRtXUEjFmZBkPtvQVhafEG0035BNeOBQef6hEFHT4lBVOCOQcHFmEF3uJ1BzlaeQTKGpEGN/6ZBB3a2QR69v0HQ1MJBLynHQYbHx0E0BMlB6vbNQUVw0EFFcNBBpcTUQQA+10EWheBBxMHhQRtg4kHRUudB1S3pQeeZ8EGV1vFBR+70QaZC+UFYWvxBr/j8QV01/kG00/5BXFcAQt5EAUK30AJCDm8DQjm+A0JlDQRCkFwEQpBcBEK8qwRCq34PQjFHEkKI5RJCiOUSQjYiFEI2IhRCNiIUQhOJF0I/2BdClXYYQm4CGkIYZBlCniwcQv6AIELXDCJC1wwiQi6rIkKwmCNCBzckQl3VJEK5TidCEO0nQj8XKkLCBCtCHX4tQkjNLUJNqC9C+uQwQvrkMEImNDFCqCEyQtNwMkKs/DNC2Es0Qgd2NkLgAThCN6A4Qjx7OkJrpTxCHr0/Qsv5QEKkhUJC0NRCQi8pR0IItUhCCLVIQl9TSUI430pCEWtMQmgJTULq9k1CmDNPQsOCT0Jxv1BCnA5RQsddUULHXVFCHvxRQnWaUkKlxFRC0BNVQtATVUJSAVZCUgFWQqmfVkLV7lZCV9xXQq56WEIFGVlCBRlZQrJVWkJgkltCCfRaQjRDW0JgkltCYJJbQrcwXELif1xCDc9cQjkeXUI5Hl1CkLxdQpC8XUKQvF1CEqpeQmlIX0IWhWBCFoVgQphyYULvEGJCcf5iQh87ZEJKimRC+MZlQk9lZkJPZWZC"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "y",
+            0,
+            "data"
+          ],
+          "data": "P9gXQl2WEkJU4A5Cfy8PQrgPFUKI5RJCfy8PQvSLCkIg2wpCe1QNQmZMFkIbAAlCMUcSQrgPFULEYQhCUAUNQkJ0B0Lr1QZCwIYGQiDbCkJCdAdCBpf9QcCGBkIbAAlCpkL5QZU3BkJp6AVC4x8DQntUDUKMgQJC/UEOQs0XDEJ7VA1CpkL5QevVBkJp6AVC8LAIQrfQAkIKcv9BerTmQTEIAELe4+xBzXflQex08kE5Xe9BXTX+QUfu9EF6tOZBEkoFQlCk+EFdNf5BPpkFQgpy/0ExCABCh6YAQhtg4kGMgQJComf3QTWC7UHNd+VBjCDuQf3g+UFgkttBmbHzQYyBAkI+mQVCKPHnQeeZ8EHNd+VBldbxQSjx50G7C95BOV3vQex08kFkbd1B3uPsQSzMaUEszGlBQhPzQZD770F6tOZB0VLnQZ6M9UFUf/pBnA7RQRKq3kFYWvxBRXDQQd7j7EFH7vRBMQgAQqz8s0FFcNBBhsfHQQK8+0E5Xe9BGeK9QTjfykGiZ/dBldbxQYwg7kFrpbxBUgHWQStOxUEJ9NpB4UDKQZgzz0EJ9NpBaicYQrzqFkJuAhpCfy8PQrgPFUKRmxZCq34PQvSLCkJhcRRCOv0VQgIdEEIg2wpCGwAJQs0XDEItbBBC+WYMQgb4EUICHRBCfy8PQiDbCkK0NBNCVOAOQiS2DEJ2eQtCbsMHQs0XDEK00/5BGwAJQqZC+UGz9QBCZQ0EQpkSCEL5ZgxC5/oEQqajDUK8qwRClTcGQkvJ9kGmQvlBxGEIQoemAEJLyfZBUKT4QbfQAkK00/5BerTmQfBP9EFcVwBCnoz1QbTT/kE+OPFB55nwQYNq6kGHpgBCqx37QYwg7kHeRAFCg2rqQWRt3UFx/uJBkPvvQfBP9EExp+tBFoXgQUIT80Hjvu5B/eD5QZD770HwT/RBNeMBQueZ8EFpSN9BtzDcQZmx80GMIO5BCfTaQXbZ5EFFcNBBWFr8QW0j4UEKcv9Bg2rqQX0RxEH0KvZB3WXIQeO+7kEjFuZBa6W8QYNq6kHUr8RB5hvMQeeZ8EG3MNxB94fTQcic40E/2BdC414VQgrTE0KNwBRC414VQoQKEUK86hZCiOUSQp3tCUJhcRRCZkwWQli7EELS8g1C1s0PQjYiFEICHRBCNiIUQgb4EUL9QQ5CXZYSQiS2DELWzQ9C1s0PQtLyDUIpkQ5CzRcMQlTgDkKVNwZCOb4DQrQ0E0Kmow1CPpkFQtLyDUJ/Lw9CdnkLQqajDULwsAhCwIYGQj6ZBUIKlAFCBpf9QW7DB0I5vgNCPpkFQuMfA0I+mQVCpkL5Qck8CkKiyAtCjIECQp3tCUJlDQRCmRIIQuf6BELwsAhClTcGQrfQAkJgMgJCPpkFQv3g+UGMgQJC5/oEQkvJ9kHjHwNC7HTyQbP1AEJynglCyJzjQVha/EFLyfZBcf7iQYdF7EH94PlBXTX+QTGn60E+OPFBt9ACQqJn90G00/5BvKsEQkIT80GiZ/dBR+70Qf3g+UHwT/RBXTX+QdoI60F/j+hB3uPsQUvJ9kEfO+RBZQ0EQn+P6EF22eRBHzvkQdoI60GuethB2gjrQfBP9EGV1vFB2gjrQaZC+UE1gu1BpkL5QcTB4UFgMgJCPpkFQt7j7EHRUudBEqreQXq05kE+OPFBZG3dQR875EFpSN9B7HTyQYdF7EHRUudB55nwQaZC+UFtI+FBIxbmQfBP9EEAPtdBh0XsQZmx80ECvPtBerTmQdoI60HEweFBBRnZQX+P6EFFcNBBoOnSQYNq6kFH7vRBv+bfQd1lyEHaCOtBR+70Qb/m30GlxNRB9Cr2QTQEyUF0W8BBldbxQXH+4kHRUudBMafrQWulvEFpSN9BeTbCQTQEyUFKS9JBkPvvQc135UEAPtdBdtnkQcTB4UFbt9lB3uPsQVIB1kHYisZBBRnZQY99y0H3h9NB"
+        },
+        {
+          "encoding": "base64",
+          "path": [
+            "z",
+            0,
+            "data"
+          ],
+          "data": "OseBQcEDl0GU749BhZONQWfbiEHQX5lB37ubQRsspUGFk41B37ubQTrHgUHuF55Bo0uSQSmlz0GjS5JBwQOXQf1zoEHuF55B0F+ZQdBfmUEM0KJBDNCiQRsspUHQX5lBSECsQe4XnkEqiKdBKoinQSqIp0Fm+LBBSECsQRsspUF1VLNBhLC1Qc98wUHAIL9Bkwy4QWb4sEH8kMhBz3zBQQvtykEppc9B7TTGQc98wUF1VLNBZviwQfyQyEHtNMZBGyylQcAgv0F1VLNBGyylQWb4sEHfu5tBwQOXQYWTjUEbLKVBDNCiQYWTjUEqiKdBC+1KQb89Z0E3HnpBGWZ1QWfbiEE6x4FBKaVPQSmlT0GhhWJBZRVZQUkjhEEZZnVBg81dQTrHgUFJI4RBvz1nQe00xkAppc9A3fVrQWfbiEFYf4ZBSSOEQTceekHd9WtBscQ8QfutcEHBAxdBZRXZQN+7G0Fn2whB/XMgQbHEPEFlFdlAdVSzQP1zIEGjSxJBoYViQMEDFz8ZZvVASSMEQXVUs0AZZnVAwQOXPrHEPEBXnC5BKaVPQMEDFz/BAxc/Z9uIQZTvj0FYf4ZBdjeLQaNLkkGFk41Bo0uSQcEDl0FV1n5BSSOEQbKnlEGU749BhZONQaNLkkHBA5dB37ubQdBfmUGFk41BdjeLQe4XnkHBA5dB7heeQaNLkkGFk41BDNCiQd+7m0E55KlB37ubQTnkqUEbLKVBSECsQTnkqUEqiKdBdVSzQZMMuEHe2MNBhLC1QbHEvEF1VLNB3tjDQaJoukEaSc1Bkwy4QaJoukHe2MNB3tjDQYSwtUHAIL9B7TTGQRsspUFXnK5BOeSpQYSwtUH9c6BBomi6Qe4XnkH9c6BBSSOEQcEDl0FIQKxB3fVrQWUVWUFYf4ZBsqeUQYPNXUFHXVRB+61wQUddVEHd9WtBSSOEQUddVEFV1n5BZ9uIQTceekFV1v5Akww4QYWTDUHPfEFB37sbQaNLEkEbLCVBg81dQbHEvD9V1v5AwQOXQGfbCEHPfEFBwQMXQFXW/kDBA5c/wQOXQFXW/kAZZvVAscQ8QMEDFz92N4tBWH+GQbKnlEFn24hBsqeUQaNLkkGU749Bo0uSQe4XnkFJI4RBlO+PQXY3i0HBA5dB0F+ZQaNLkkGyp5RBsqeUQWfbiEF2N4tBlO+PQe4XnkF2N4tBwQOXQd+7m0GFk41BZ9uIQYWTjUHQX5lB37ubQdBfmUF2N4tBDNCiQcEDl0Gyp5RBsqeUQe4XnkHuF55B0F+ZQTnkqUEM0KJBGyylQe4XnkFIQKxBDNCiQVecrkHQX5lBKoinQRsspUHuF55BV5yuQYSwtUE55KlBV5yuQWb4sEFm+LBBkwy4QcAgv0F1VLNB7TTGQaJoukFm+LBBOeSpQc98wUFIQKxB3tjDQXVUs0GxxLxB/JDIQWb4sEH8kMhBGknNQaJoukF1VLNB7TTGQfyQyEGxxLxBZviwQWb4sEHPfMFBdVSzQc98wUEaSc1BGyylQTnkqUGTDLhBscS8QXVUs0GiaLpBOseBQQzQokF2N4tBwQOXQTnkqUGU749BGyylQaGFYkH7rXBBSSOEQaGFYkFV1n5BKoinQd31a0GDzV1Bg81dQRlmdUFYf4ZBSSOEQVXWfkG/PWdBNx56QVh/hkFYf4ZBOseBQTceekFYf4ZBVdZ+QWUVWUH7rXBBdjeLQTrHgUEZZnVBz3xBQUkjhEFlFVlBVdZ+QWUVWUEZZnVBo0sSQRssJUFV1v5A7TRGQQvtSkGxxLxASSOEQLHEPEHBAxdBSSMEQbHEvEBlFVlBscQ8Qd31a0GDzV1B/XMgQYWTjUCxxDxA37sbQSmlT0H9cyBBSSMEQTnkKUBJIwRBoYXiP8EDlz8ZZnVAZRXZQDnkKUEbLCVBkww4QQvtSkHBA5c/SSMEQVecLkHBA5dA37sbQRlmdUCxxLw/"
+        }
+      ]
+    },
+    "856bb0536dd84ad2ac29c12f742ff281": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.0.3",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.0.3",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "6e3f202242a144b7b53c088241fc57f5": {
+      "model_name": "ShaderMaterialModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.0.3",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.0.3",
+        "_model_name": "ShaderMaterialModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "alphaTest": 0.0,
+        "blendDst": "OneMinusSrcAlphaFactor",
+        "blendDstAlpha": 0.0,
+        "blendEquation": "AddEquation",
+        "blendEquationAlpha": 0.0,
+        "blendSrc": "SrcAlphaFactor",
+        "blendSrcAlpha": 0.0,
+        "blending": "NormalBlending",
+        "clipIntersection": false,
+        "clipShadows": false,
+        "clipping": false,
+        "clippingPlanes": [],
+        "colorWrite": true,
+        "defines": null,
+        "depthFunc": "LessEqualDepth",
+        "depthTest": true,
+        "depthWrite": true,
+        "dithering": false,
+        "extensions": {},
+        "flatShading": false,
+        "fog": false,
+        "fragmentShader": "",
+        "lights": false,
+        "linewidth": 1.0,
+        "morphNormals": false,
+        "morphTargets": false,
+        "name": "",
+        "opacity": 1.0,
+        "overdraw": 0.0,
+        "polygonOffset": false,
+        "polygonOffsetFactor": 0.0,
+        "polygonOffsetUnits": 0.0,
+        "precision": null,
+        "premultipliedAlpha": false,
+        "shadowSide": null,
+        "side": "FrontSide",
+        "skinning": false,
+        "transparent": false,
+        "type": "ShaderMaterial",
+        "uniforms": {},
+        "uniformsNeedUpdate": false,
+        "vertexColors": "NoColors",
+        "vertexShader": "",
+        "visible": true,
+        "wireframe": false,
+        "wireframeLinewidth": 1.0
+      }
+    },
+    "0341e61f530b49d4841191911e5b4cc2": {
+      "model_name": "SceneModel",
+      "model_module": "jupyter-threejs",
+      "model_module_version": "^2.0.3",
+      "state": {
+        "_model_module": "jupyter-threejs",
+        "_model_module_version": "^2.0.3",
+        "_model_name": "SceneModel",
+        "_view_count": null,
+        "_view_module": null,
+        "_view_module_version": "",
+        "_view_name": null,
+        "autoUpdate": true,
+        "background": null,
+        "castShadow": false,
+        "children": [],
+        "fog": null,
+        "frustumCulled": true,
+        "matrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixAutoUpdate": true,
+        "matrixWorld": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "matrixWorldNeedsUpdate": false,
+        "modelViewMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "name": "",
+        "normalMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "overrideMaterial": null,
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "receiveShadow": false,
+        "renderOrder": 0,
+        "rotation": [
+          0.0,
+          0.0,
+          0.0,
+          "XYZ"
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "Scene",
+        "up": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "visible": true
+      }
+    },
+    "1a3c5e514f8d40eda162f1b1377fe0b6": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.1.0",
+      "state": {
+        "_model_module": "@jupyter-widgets/base",
+        "_model_module_version": "1.1.0",
+        "_model_name": "LayoutModel",
+        "_view_count": null,
+        "_view_module": "@jupyter-widgets/base",
+        "_view_module_version": "1.1.0",
+        "_view_name": "LayoutView",
+        "align_content": null,
+        "align_items": null,
+        "align_self": null,
+        "border": null,
+        "bottom": null,
+        "display": null,
+        "flex": null,
+        "flex_flow": null,
+        "grid_area": null,
+        "grid_auto_columns": null,
+        "grid_auto_flow": null,
+        "grid_auto_rows": null,
+        "grid_column": null,
+        "grid_gap": null,
+        "grid_row": null,
+        "grid_template_areas": null,
+        "grid_template_columns": null,
+        "grid_template_rows": null,
+        "height": null,
+        "justify_content": null,
+        "left": null,
+        "margin": null,
+        "max_height": null,
+        "max_width": null,
+        "min_height": null,
+        "min_width": null,
+        "order": null,
+        "overflow": null,
+        "overflow_x": null,
+        "overflow_y": null,
+        "padding": null,
+        "right": null,
+        "top": null,
+        "visibility": null,
+        "width": null
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "9968c4704489456a90a7e5fb5903ddfd"}
+</script>
+
+
+</body>
+</html>
