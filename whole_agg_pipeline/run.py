@@ -5,7 +5,7 @@ Runs the pipeline
 import sys, os
 
 #All the input csv files for analysis should be in the file named Input 
-InputPath = 'Input'
+InputPath = 'InputTimeCourse'
 
 #For each input file, a results folder with the same name as the input file can be found in Output 
 os.mkdir("Output")
@@ -17,7 +17,7 @@ for filename in os.listdir(InputPath):
         continue
 
     #Printing out the name of the file 
-    os.system('echo && echo && echo'); os.system('echo Input/%s' % filename); os.system('echo')
+    os.system('echo && echo && echo'); os.system('echo InputTimeCourse/%s' % filename); os.system('echo')
 
     #Creating an Output file with the same name as the input file so results have a destination 
     os.chdir('Output')
@@ -26,7 +26,7 @@ for filename in os.listdir(InputPath):
     os.chdir('..')
     
     #Splitting channels and visualizing the aggregate 
-    os.system('python split_channels.py Input/%s' % filename)
+    os.system('python split_channels_tc.py InputTimeCourse/%s' % filename)
     os.system('python scatter_plot.py')
 
     
