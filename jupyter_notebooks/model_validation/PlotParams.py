@@ -30,7 +30,6 @@ plt.scatter(r, y, c='b',s=1); plt.title('Radius'); plt.xlim(2, 8); plt.savefig("
 plt.scatter(rse, y, c='g',s=1); plt.title('Radius standard error'); plt.savefig("Radius standard error"); plt.close()
 
 plt.scatter(pi, y, c='b',s=1); plt.title('Pitch'); plt.xlim(11, 17); plt.savefig("Pitch"); plt.close()
-
 plt.scatter(pise, y, c='g',s=1); plt.title('Pitch standard error'); plt.savefig("Pitch standard error"); plt.close()
 
 plt.scatter(ph, y, c='b',s=1); plt.title('Phase'); plt.savefig("Phase"); plt.close()
