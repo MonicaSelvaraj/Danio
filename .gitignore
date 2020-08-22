@@ -35,4 +35,5 @@ jupyter_notebooks/model_validation/p2_outOfBoundary.csv
 jupyter_notebooks/model_validation/params.csv
 jupyter_notebooks/model_validation/projections.csv
 .DS_Store
+jupyter_notebooks/.DS_Store
 whole_agg_pipeline/.DS_Store
