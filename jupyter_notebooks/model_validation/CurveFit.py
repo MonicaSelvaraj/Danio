@@ -72,10 +72,9 @@ c1 = np.array(c1, dtype = float); c2 = np.array(c2, dtype = float); c3 = np.arra
 r2,pi2,ph2,rse2,pise2,phse2,fitc2 = BestFit(c1, c2) # Predicts C2 given C1
 r3,pi3,ph3,rse3,pise3,phse3,fitc3 = BestFit(c1, c3)  # Predicts C3 given C1
 #Store params
-#fitParams = [((r2+r3)/2), ((pi2+pi3)/2), ((ph2+ph3)/2), ((rse2+rse3)/2), ((pise2+pise3)/2), ((phse2+phse3)/2)]
 fitParams = [r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3]
 
-#Write 3D fit to file
+#Write fit to file
 np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
 #Write params to file
 appendToCsv("params.csv", fitParams)
