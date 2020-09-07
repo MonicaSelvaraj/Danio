@@ -1,7 +1,6 @@
 '''
 This script takes in arguments in the following order: 
 numPoints, radius, pitch, percentError, numBoot, numSamples
-
 '''
 
 import sys, os, csv, random
@@ -31,7 +30,7 @@ def generatePopulation(numPoints, radius, pitch, p_error):
 numPoints = int(sys.argv[1]) #population size
 radius = int(sys.argv[2])
 pitch = int(sys.argv[3])
-percentError = int(sys.argv[4]) 
+p_error = int(sys.argv[4]) 
 numBoot = int(sys.argv[5]) #number of bootstraps to perform 
 numSamples = int(sys.argv[6]) #number of samples to pick for each run of curve fitting 
 
@@ -42,7 +41,8 @@ x,y,z = generatePopulation(numPoints, radius, pitch, p_error)
 data = list(zip(x, y, z))
 #Delete params output file before next run
 if os.path.exists("params.csv"): os.remove('params.csv')
-for i in range(0,numBoot): #Number of times you want to bootstrap 
+i = 0
+while(i < numBoot):
     boot = resample(data, replace = True, n_samples = numSamples)
     xBoot, yBoot, zBoot = zip(*boot)
     #Write coordinates to a file
@@ -52,4 +52,10 @@ for i in range(0,numBoot): #Number of times you want to bootstrap
     #Create 2D projections 
     os.system('python Project2D.py')
     #curve fit 
-    os.system('python CurveFit.py')
+    ret = os.system('python CurveFit.py')
+    if ret == 0:
+        i = i + 1
+    else:
+        print("Curve fit optimal parameters not found")
+        continue
+           
