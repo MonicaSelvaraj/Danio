@@ -40,7 +40,7 @@ def PCs(x,y,z):
                   axis=1)
     datamean = data.mean(axis=0) #Center of helix
     uu, dd, vv = np.linalg.svd(data - datamean)
-    #Taking the variation in the z dimension, because this is the    dimension of PC1
+    #Taking the variation in the z dimension, because this is the dimension of PC1
     return vv[0], vv[1], vv[2], datamean
 
 '''

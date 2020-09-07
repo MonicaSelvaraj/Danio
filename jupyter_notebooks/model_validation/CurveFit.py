@@ -74,12 +74,20 @@ r3,pi3,ph3,rse3,pise3,phse3,fitc3 = BestFit(c1, c3)  # Predicts C3 given C1
 #Store params
 fitParams = [r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3]
 
-#Write fit to file
+#Write fit coordinates to file
 np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
 #Write params to file
 appendToCsv("params.csv", fitParams)
+
+#if os.path.exists("in.csv"): os.remove('in.csv')
+#if(((rse2+rse3)/2) < 2.2): np.savetxt("p2_inBoundary.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, #dtype=float))), delimiter=",", fmt='%s')
+
+    
+    
+'''
 #Writing outlier points to a separate file
 if(((rse2+rse3)/2) > 2.2): np.savetxt("outlierFit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
 if(((rse2+rse3)/2) > 2.2): np.savetxt("p2_outOfBoundary.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
 if(((rse2+rse3)/2) < 2.2): np.savetxt("p2_inBoundary.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
+'''
 
