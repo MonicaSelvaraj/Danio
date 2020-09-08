@@ -56,4 +56,6 @@ while(i < numBoot):
     if ret == 0:
         i = i + 1
     else:
-        print("Curve fit optimal parameters not found") 
+        print("Curve fit optimal parameters not found")
+        continue
+        
