@@ -10,8 +10,8 @@ import os
 if os.path.exists("threshold.txt"): os.remove('threshold.txt')
 if os.path.exists("population.txt"): os.remove('population.txt')    
     
-os.system('python estimate_outlier_thresh.py 5000 3 14 5 10000 500 pop1_5')
-#os.system('python estimate_outlier_thresh.py 5000 3 14 10 10000 500 pop1_10')
-#os.system('python estimate_outlier_thresh.py 5000 3 14 15 10000 500 pop1_15')
-#os.system('python estimate_outlier_thresh.py 5000 3 14 20 10000 500 pop1_20')
+os.system('python estimate_outlier_thresh.py 1000 3 14 5 5000 250 pop1_5')
+os.system('python estimate_outlier_thresh.py 1000 3 14 10 5000 250 pop1_10')
+os.system('python estimate_outlier_thresh.py 1000 3 14 15 5000 250 pop1_15')
+os.system('python estimate_outlier_thresh.py 1000 3 14 20 5000 250 pop1_20')
 
