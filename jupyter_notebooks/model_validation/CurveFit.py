@@ -5,6 +5,7 @@ Combining the 2D fits to get a 3D fit
 
 #!/usr/bin/python
 import csv
+import sys
 import math
 import numpy as np
 from csv import writer
@@ -46,7 +47,11 @@ def helixFitSin(pc1, r, pitch, phase):
 Given x, predict the best y 
 '''
 def fitFunction(x, y, function):
+    try:
         popt, pcov = curve_fit(function, x, y, bounds=(0, [30, 30, 2*math.pi]))
+    except RuntimeError:
+        sys.exit(1)
+    else:
         radius = popt[0]; pitch = popt[1]; phase = popt[2]
         StandardErr = np.sqrt(np.diag(pcov))
         return(radius, pitch, phase, StandardErr[0], StandardErr[1], StandardErr[2])
@@ -78,6 +83,7 @@ fitParams = [r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3]
 np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
 #Write params to file
 appendToCsv("params.csv", fitParams)
+sys.exit(0)
 
 #if os.path.exists("in.csv"): os.remove('in.csv')
 #if(((rse2+rse3)/2) < 2.2): np.savetxt("p2_inBoundary.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, #dtype=float))), delimiter=",", fmt='%s')
