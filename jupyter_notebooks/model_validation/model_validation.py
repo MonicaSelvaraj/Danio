@@ -43,6 +43,7 @@ data = list(zip(x, y, z))
 if os.path.exists("params.csv"): os.remove('params.csv')
 i = 0
 while(i < numBoot):
+    print(i)
     boot = resample(data, replace = True, n_samples = numSamples)
     xBoot, yBoot, zBoot = zip(*boot)
     #Write coordinates to a file
