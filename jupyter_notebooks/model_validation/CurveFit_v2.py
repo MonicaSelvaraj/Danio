@@ -1,12 +1,11 @@
 '''
 Usage: Fit curves in 2D first
 Combining the 2D fits to get a 3D fit
+pop is passed in as an argument to the script 
 '''
 
 #!/usr/bin/python
-import csv
-import sys
-import math
+import csv, sys, math
 import numpy as np
 from csv import writer
 from scipy.optimize import curve_fit
@@ -35,6 +34,20 @@ def appendToCsv(filename, line):
         csv_writer = writer(write_obj)
         # Add contents of list as last row in the csv file
         csv_writer.writerow(line)
+        
+'''
+Usage: To create dictionary with population names as keys and 
+outlier removal thresholds as values.
+'''
+def outlierThresholdsDict():
+    keys = list(); values = list()
+    a = open('population.txt','r')
+    for line in a:
+        keys.append(line.strip())
+    b = open('threshold.txt', 'r')
+    for line in b:
+        values.append(line.strip())
+    return dict(zip(keys, values))
 
 '''
 Defining input functions to scipy.optimize.curvefit
@@ -69,31 +82,33 @@ def BestFit(x,y):
         else:
                 yOpt = [helixFitSin(c1, SinFit[0], SinFit[1], SinFit[2]) for c1 in x]
                 return (SinFit[0],SinFit[1],SinFit[2],SinFit[3],SinFit[4],SinFit[5],yOpt)
-        
+
 #Get input     
 c1,c2,c3 = getPoints("projections.csv")
 c1 = np.array(c1, dtype = float); c2 = np.array(c2, dtype = float); c3 = np.array(c3, dtype = float)
+
 #Fit
 r2,pi2,ph2,rse2,pise2,phse2,fitc2 = BestFit(c1, c2) # Predicts C2 given C1
 r3,pi3,ph3,rse3,pise3,phse3,fitc3 = BestFit(c1, c3)  # Predicts C3 given C1
-#Store params
 fitParams = [r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3]
 
 #Write fit coordinates to file
 np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
-#Write params to file
-appendToCsv("params.csv", fitParams)
+
+#Store params after checking that it's not an outlier 
+#Remove outliers from params
+#Getting pop name to get outlier removal threshold from dict 
+pop = sys.argv[1] 
+out_thresh_dict = outlierThresholdsDict()
+print(out_thresh_dict)
+threshold = out_thresh_dict[pop]
+print(threshold)
+
+rse = (rse2 + rse3)/2
+if(rse <= threshold)
+    appendToCsv("params.csv", fitParams)
+else
+    #Write outlier coordinates to outliers.csv
+    np.savetxt("outliers.csv", np.column_stack((c1, c2, c3)), delimiter=",", fmt='%s', mode = 'a')
+
 sys.exit(0)
-
-#if os.path.exists("in.csv"): os.remove('in.csv')
-#if(((rse2+rse3)/2) < 2.2): np.savetxt("p2_inBoundary.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, #dtype=float))), delimiter=",", fmt='%s')
-
-    
-    
-'''
-#Writing outlier points to a separate file
-if(((rse2+rse3)/2) > 2.2): np.savetxt("outlierFit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
-if(((rse2+rse3)/2) > 2.2): np.savetxt("p2_outOfBoundary.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
-if(((rse2+rse3)/2) < 2.2): np.savetxt("p2_inBoundary.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
-'''
-
