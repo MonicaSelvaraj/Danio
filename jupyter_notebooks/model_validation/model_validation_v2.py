@@ -56,7 +56,7 @@ pitch = int(sys.argv[3])
 p_error = int(sys.argv[4]) 
 numBoot = int(sys.argv[5]) #number of bootstraps to perform 
 numSamples = int(sys.argv[6]) #number of samples to pick for each run of curve fitting 
-pop = int(sys.argv[7])
+pop = sys.argv[7]
 
 #Generate a perfect helix with the z axis as the long axis.
 x,y,z = generatePopulation(numPoints, radius, pitch, p_error)
@@ -89,7 +89,7 @@ while(i < numBoot):
 
 #Plot params - no outliers
 r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3 = getParams("params.csv")
-
+y = list(range(1,numBoot+1))
 plt.style.use('dark_background')
 
 #plots

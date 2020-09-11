@@ -101,13 +101,14 @@ np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.arra
 pop = sys.argv[1] 
 out_thresh_dict = outlierThresholdsDict()
 print(out_thresh_dict)
-threshold = out_thresh_dict[pop]
+threshold = float(out_thresh_dict[pop])
 print(threshold)
 
-rse = (rse2 + rse3)/2
-if(rse <= threshold)
+rse = float((rse2 + rse3)/2)
+print('rse' + str(rse))
+if(rse <= threshold):
     appendToCsv("params.csv", fitParams)
-else
+else:
     #Write outlier coordinates to outliers.csv
     np.savetxt("outliers.csv", np.column_stack((c1, c2, c3)), delimiter=",", fmt='%s', mode = 'a')
 
