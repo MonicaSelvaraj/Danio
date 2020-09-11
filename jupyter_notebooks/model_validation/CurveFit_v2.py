@@ -100,12 +100,9 @@ np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.arra
 #Getting pop name to get outlier removal threshold from dict 
 pop = sys.argv[1] 
 out_thresh_dict = outlierThresholdsDict()
-print(out_thresh_dict)
 threshold = float(out_thresh_dict[pop])
-print(threshold)
 
 rse = float((rse2 + rse3)/2)
-print('rse' + str(rse))
 if(rse <= threshold):
     appendToCsv("params.csv", fitParams)
 else:
