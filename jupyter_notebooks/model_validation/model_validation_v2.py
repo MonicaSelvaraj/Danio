@@ -79,7 +79,8 @@ while(i < numBoot):
     #Create 2D projections 
     os.system('python Project2D.py')
     #curve fit 
-    ret = os.system('python CurveFit_v2.py ' + pop)
+    cmd = 'python CurveFit_v2.py ' + pop
+    ret = os.system(cmd)
     if ret == 0:
         i = i + 1
     else:
