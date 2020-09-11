@@ -1,4 +1,5 @@
 '''
+This version of model validation is used to estimate outlier thresholds. 
 This script takes in arguments in the following order: 
 numPoints, radius, pitch, percentError, numBoot, numSamples
 '''
