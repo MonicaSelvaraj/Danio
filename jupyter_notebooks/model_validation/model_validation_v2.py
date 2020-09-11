@@ -9,6 +9,7 @@ import numpy as np
 from sklearn.utils import resample
 import statistics
 import matplotlib.pyplot as plt
+import shutil
 
 #Helper functions
 '''
@@ -92,19 +93,28 @@ r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3 = getParams("params.csv"
 y = list(range(1,numBoot+1))
 plt.style.use('dark_background')
 
+#Remove old output file if it exists
+if os.path.exists(pop) and os.path.isdir(pop):
+    shutil.rmtree(pop)
+
+#Make output file to store images
+os.mkdir(pop)
+os.chdir(pop)
+os.mkdir('sampling distributions')
+os.chdir('..')
 #plots
 
-plt.scatter(r2, y, c='b',s=1); plt.title('Radius c1c2'); plt.xlim(2, 8); plt.savefig("Radius c1c2"); plt.close()
-plt.scatter(rse2, y, c='g',s=1); plt.title('Radius standard error c1c2'); plt.savefig("Radius standard error c1c2"); plt.close()
-plt.scatter(r3, y, c='b',s=1); plt.title('Radius c1c3'); plt.xlim(2, 8); plt.savefig("Radius c1c3"); plt.close()
-plt.scatter(rse3, y, c='g',s=1); plt.title('Radius standard error c1c3'); plt.savefig("Radius standard error c1c3"); plt.close()
+plt.scatter(r2, y, c='b',s=1); plt.title('Radius c1c2'); plt.xlim(2, 8); plt.savefig(pop+"/sampling distributions/Radius c1c2"); plt.close()
+plt.scatter(rse2, y, c='g',s=1); plt.title('Radius standard error c1c2'); plt.savefig(pop+"/sampling distributions/Radius standard error c1c2"); plt.close()
+plt.scatter(r3, y, c='b',s=1); plt.title('Radius c1c3'); plt.xlim(2, 8); plt.savefig(pop+"/sampling distributions/Radius c1c3"); plt.close()
+plt.scatter(rse3, y, c='g',s=1); plt.title('Radius standard error c1c3'); plt.savefig(pop+"/sampling distributions/Radius standard error c1c3"); plt.close()
 
-plt.scatter(pi2, y, c='b',s=1); plt.title('Pitch c1c2'); plt.xlim(11, 17); plt.savefig("Pitch c1c2"); plt.close()
-plt.scatter(pise2, y, c='g',s=1); plt.title('Pitch standard error c1c2'); plt.savefig("Pitch standard error c1c2"); plt.close()
-plt.scatter(pi3, y, c='b',s=1); plt.title('Pitch c1c3'); plt.xlim(11, 17); plt.savefig("Pitch c1c3"); plt.close()
-plt.scatter(pise3, y, c='g',s=1); plt.title('Pitch standard error c1c3'); plt.savefig("Pitch standard error c1c3"); plt.close()
+plt.scatter(pi2, y, c='b',s=1); plt.title('Pitch c1c2'); plt.xlim(11, 17); plt.savefig(pop+"/sampling distributions/Pitch c1c2"); plt.close()
+plt.scatter(pise2, y, c='g',s=1); plt.title('Pitch standard error c1c2'); plt.savefig(pop+"/sampling distributions/Pitch standard error c1c2"); plt.close()
+plt.scatter(pi3, y, c='b',s=1); plt.title('Pitch c1c3'); plt.xlim(11, 17); plt.savefig(pop+"/sampling distributions/Pitch c1c3"); plt.close()
+plt.scatter(pise3, y, c='g',s=1); plt.title('Pitch standard error c1c3'); plt.savefig(pop+"/sampling distributions/Pitch standard error c1c3"); plt.close()
 
-plt.scatter(ph2, y, c='b',s=1); plt.title('Phase c1c2'); plt.savefig("Phase c1c2"); plt.close()
-plt.scatter(phse2, y, c='g',s=1); plt.title('Phase standard error c1c2'); plt.savefig("Phase standard error c1c2");  plt.close()
-plt.scatter(ph3, y, c='b',s=1); plt.title('Phase c1c3'); plt.savefig("Phase c1c3"); plt.close()
-plt.scatter(phse3, y, c='g',s=1); plt.title('Phase standard error c1c3'); plt.savefig("Phase standard error c1c3");  plt.close()
+plt.scatter(ph2, y, c='b',s=1); plt.title('Phase c1c2'); plt.savefig(pop+"/sampling distributions/Phase c1c2"); plt.close()
+plt.scatter(phse2, y, c='g',s=1); plt.title('Phase standard error c1c2'); plt.savefig(pop+"/sampling distributions/Phase standard error c1c2");  plt.close()
+plt.scatter(ph3, y, c='b',s=1); plt.title('Phase c1c3'); plt.savefig(pop+"/sampling distributions/Phase c1c3"); plt.close()
+plt.scatter(phse3, y, c='g',s=1); plt.title('Phase standard error c1c3'); plt.savefig(pop+"/sampling distributions/Phase standard error c1c3");  plt.close()
