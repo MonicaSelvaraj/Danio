@@ -108,6 +108,7 @@ if(rse <= threshold):
 else:
     #Write outlier coordinates to outliers.csv
     with open('outliers.csv','ab') as f:
-    np.savetxt(f, np.column_stack((c1, c2, c3)), delimiter=",", fmt='%s')
+        np.savetxt(f, np.column_stack((c1, c2, c3)), delimiter=",", fmt='%s')
+        sys.exit(1)
 
 sys.exit(0)
