@@ -63,14 +63,15 @@ r3,pi3,ph3,rse3,pise3,phse3,fitc3 = BestFit(c1, c3)  # Predicts C3
 fitParams = [r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3]
 #Write fit coordinates to file
 np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.array(fitc3, dtype=float))), delimiter=",", fmt='%s')
+print(sys.argv[1])
 
 #Mode for outlier threshold detection
-if(sys.argv[1] == 1): 
+if(int(sys.argv[1]) == 1): 
     #Append params to params.csv
     common_funcs.appendToCsv("params.csv", fitParams)
 
 #Mode to estimate 95% CI
-if(sys.argv[1] == 2):
+if(int(sys.argv[1]) == 2):
     #Append params only after checking that it's not an outlier 
     pop = sys.argv[2] 
     out_thresh_dict = common_funcs.outlierThresholdsDict()
