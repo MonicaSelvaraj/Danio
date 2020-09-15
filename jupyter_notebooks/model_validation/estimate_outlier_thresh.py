@@ -29,7 +29,7 @@ thresh = list()
 
 #Run model validation 10 times, store mean of threshold
 for i in range(0,10):
-    os.system('python model_validation.py ' + sys.argv[1] + ' ' + sys.argv[2] + ' ' + sys.argv[3] + ' ' + sys.argv[4] + ' ' + sys.argv[5] + ' ' + sys.argv[6])
+    os.system('python model_validation_v1.py ' + sys.argv[1] + ' ' + sys.argv[2] + ' ' + sys.argv[3] + ' ' + sys.argv[4] + ' ' + sys.argv[5] + ' ' + sys.argv[6])
 
     #After one run of model_validation, you have a params file to work with 
     r2,pi2,ph2,rse2,pise2,phse2,r3,pi3,ph3,rse3,pise3,phse3 = getParams("params.csv")
