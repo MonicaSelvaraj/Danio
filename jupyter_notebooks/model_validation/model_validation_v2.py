@@ -69,13 +69,13 @@ data = list(zip(x, y, z))
 #Delete params output file before next run
 if os.path.exists("params.csv"): os.remove('params.csv')
 i = 0
-while(i < numBoot):
+while(i < numBoot): #Set up for 100 successful runs
     print(i)
+    #Delete old input file if one exists
+    if os.path.exists("input.csv"): os.remove('input.csv')
     boot = resample(data, replace = True, n_samples = numSamples)
     xBoot, yBoot, zBoot = zip(*boot)
     #Write coordinates to a file
-    #Delete old input file if one exists
-    if os.path.exists("input.csv"): os.remove('input.csv')
     np.savetxt("input.csv", np.column_stack((np.array(xBoot, dtype=float), np.array(yBoot, dtype=float), np.array(zBoot, dtype=float))), delimiter=",", fmt='%s')
     #Create 2D projections 
     os.system('python Project2D.py')
@@ -85,7 +85,7 @@ while(i < numBoot):
     if ret == 0:
         i = i + 1
     else:
-        print("Curve fit optimal parameters not found")
+        print("Curve fit optimal parameters not found or outlier")
         continue
 
 #Plot params - no outliers
@@ -94,6 +94,7 @@ y = list(range(1,numBoot+1))
 plt.style.use('dark_background')
 
 #Remove old output file if it exists
+#TODO: Go into results file and remove pop folder 
 if os.path.exists(pop) and os.path.isdir(pop):
     shutil.rmtree(pop)
 

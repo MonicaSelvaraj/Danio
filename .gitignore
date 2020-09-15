@@ -24,14 +24,8 @@ whole_agg_pipeline/FitPitchSE.txt
 whole_agg_pipeline/FitRadius.txt
 whole_agg_pipeline/FitRadiusSE.txt
 whole_agg_pipeline/Results.csv
-jupyter_notebooks/model_validation/Results
 jupyter_notebooks/model_validation/fit.csv
-jupyter_notebooks/model_validation/inBoundary.csv
 jupyter_notebooks/model_validation/input.csv
-jupyter_notebooks/model_validation/outOfBoundary.csv
-jupyter_notebooks/model_validation/outlierFit.csv
-jupyter_notebooks/model_validation/p2_inBoundary.csv
-jupyter_notebooks/model_validation/p2_outOfBoundary.csv
 jupyter_notebooks/model_validation/params.csv
 jupyter_notebooks/model_validation/projections.csv
 .DS_Store
