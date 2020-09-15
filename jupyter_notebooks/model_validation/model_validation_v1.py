@@ -8,7 +8,6 @@ import sys, os, csv, random
 import numpy as np
 from sklearn.utils import resample
 
-#Helper functions
 '''
 Usage: To generate a helix consisting of numPoints, with a given radius, pitch 
        and percent spatial error. 
