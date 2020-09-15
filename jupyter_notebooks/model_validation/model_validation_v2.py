@@ -80,7 +80,7 @@ while(i < numBoot): #Set up for 100 successful runs
     #Create 2D projections 
     os.system('python Project2D.py')
     #curve fit 
-    cmd = 'python CurveFit_v2.py ' + pop
+    cmd = 'python curve_fit.py 2' + pop
     ret = os.system(cmd)
     if ret == 0:
         i = i + 1

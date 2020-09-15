@@ -54,7 +54,7 @@ while(i < numBoot):
     #Create 2D projections 
     os.system('python Project2D.py')
     #curve fit 
-    ret = os.system('python CurveFit_v1.py')
+    ret = os.system('python curve_fit.py 1 none')
     if ret == 0:
         i = i + 1
     else:
