@@ -107,6 +107,7 @@ if(rse <= threshold):
     appendToCsv("params.csv", fitParams)
 else:
     #Write outlier coordinates to outliers.csv
-    np.savetxt("outliers.csv", np.column_stack((c1, c2, c3)), delimiter=",", fmt='%s', mode = 'a')
+    with open('outliers.csv','ab') as f:
+    np.savetxt(f, np.column_stack((c1, c2, c3)), delimiter=",", fmt='%s')
 
 sys.exit(0)
