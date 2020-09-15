@@ -5,8 +5,8 @@ Combining the 2D fits to get a 3D fit
 
 import sys
 import math
-import common_funcs
 import numpy as np
+import common_funcs
 from scipy.optimize import curve_fit 
 
 '''
@@ -57,4 +57,3 @@ np.savetxt("fit.csv", np.column_stack((c1, np.array(fitc2, dtype=float), np.arra
 #Write params to file
 common_funcs.appendToCsv("params.csv", fitParams)
 sys.exit(0)
-

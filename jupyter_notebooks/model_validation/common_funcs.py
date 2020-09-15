@@ -37,7 +37,18 @@ def appendToCsv(filename, line):
         # Add contents of list as last row in the csv file
         csv_writer.writerow(line)
 
+'''
+usage: To create a dictionary with keys from population.txt and values from threshold.txt
 
+params: none
 
-
-
+returns: dictionary with population names as keys and 
+outlier removal thresholds as values.
+'''
+def outlierThresholdsDict():
+    keys = list(); values = list()
+    a = open('population.txt','r')
+    for line in a: keys.append(line.strip())
+    b = open('threshold.txt', 'r')
+    for line in b: values.append(line.strip())
+    return dict(zip(keys, values))
